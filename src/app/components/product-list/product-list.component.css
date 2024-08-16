@@ -1,0 +1,56 @@
+.create-button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+h1 {
+  color: #287cff;
+}
+
+.create-button {
+  background-color: #A7C7E7;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+}
+
+.create-button:hover {
+  background-color: #85A9C2;
+}
+
+.table-container {
+  margin: 20px;
+}
+
+mat-paginator {
+  margin-top: 20px;
+}
+
+.icon-delete {
+  color: #ff4650;
+}
+
+.icon-edit {
+  color: #287cff;
+}
+
+element::-webkit-scrollbar{
+    width: 0;
+  }
+
+  element{
+    scrollbar-width: none;
+  }
+
+  element{
+    overflow: hidden;
+  }

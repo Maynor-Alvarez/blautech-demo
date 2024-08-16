@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Detalle</h1>
+<div mat-dialog-content class="dialog-content">
+  <form [formGroup]="form">
+    <mat-form-field>
+      <mat-label>Nombre</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Precio</mat-label>
+      <input matInput formControlName="price">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Tipo</mat-label>
+      <input matInput formControlName="type">
+    </mat-form-field>
+
+    <div class="image-upload">
+      <label for="imageUpload" class="mat-form-field">
+        <mat-label>Imagen</mat-label>
+        <input id="imageUpload" type="file" (change)="onImageSelected($event)">
+      </label>
+      <div *ngIf="imagePreview">
+        <img [src]="imagePreview" alt="Product Image" style="max-width: 100px; max-height: 100px;">
+      </div>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="save()">Actualizar</button>
+  <button mat-button (click)="dialogRef.close()">Cancelar</button>
+</div>
